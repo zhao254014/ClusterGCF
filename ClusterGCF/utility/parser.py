@@ -10,12 +10,12 @@ def parse_args():
                         help='Project path.')
 
     parser.add_argument('--dataset', nargs='?', default='gowalla',
-                        help='Choose a dataset from {gowalla, KS10, office}')
+                        help='Choose a dataset from {gowalla, KS10, office, yelp}')
     parser.add_argument('--pretrain', type=int, default=0,
                         help='0: No pretrain, -1: Pretrain with the learned embeddings, 1:Pretrain with stored models.')
     parser.add_argument('--verbose', type=int, default=1,
                         help='Interval of evaluation.')
-    parser.add_argument('--epoch', type=int, default=2000,
+    parser.add_argument('--epoch', type=int, default=10,
                         help='Number of epoch.')
     parser.add_argument('--groups', type=int, default=1,
                         help='Number of group.')
@@ -27,7 +27,7 @@ def parse_args():
                         help='Embedding size.')
     parser.add_argument('--layer_size', nargs='?', default='[64]',
                         help='Output sizes of every layer')
-    parser.add_argument('--batch_size', type=int, default=2048,
+    parser.add_argument('--batch_size', type=int, default=1024,
                         help='Batch size.')
     parser.add_argument('--regs', nargs='?', default='[1e-1]',
                         help='Regularizations.')
