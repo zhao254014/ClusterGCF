@@ -24,7 +24,7 @@ class ClusterGCF(object):
         self.n_users = data_config['n_users']
         self.n_items = data_config['n_items']
 
-        self.n_fold = 20
+        self.n_fold = 2
 
         self.norm_adj = data_config['norm_adj']
         self.n_nonzero_elems = self.norm_adj.count_nonzero()
